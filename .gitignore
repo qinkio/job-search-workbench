@@ -1,0 +1,20 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Private local configuration
+job-search-workbench/references/local-config.md
+
+# Candidate material and generated job archives
+private/
+job-archive/
+岗位投递档案/
+*.pdf
+*.docx
+*.mp3
+*.m4a
+*.wav
+
+# Local test output
+.tmp/
+tmp/

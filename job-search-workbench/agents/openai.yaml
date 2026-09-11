@@ -1,0 +1,4 @@
+interface:
+  display_name: "求职岗位工作台"
+  short_description: "让岗位分析、简历、HR沟通、面试准备与复盘始终一致"
+  default_prompt: "使用 $job-search-workbench 分析这个岗位，并根据当前求职阶段生成和归档下一步材料。"

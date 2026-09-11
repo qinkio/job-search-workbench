@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "job_id": "{{date}}_{{company}}_{{role}}",
+  "status": "准备投递",
+  "job": {
+    "company": "{{公司}}",
+    "role": "{{岗位}}",
+    "city": "{{地点}}",
+    "salary": "{{薪资}}",
+    "experience": "{{经验}}",
+    "education": "{{学历}}",
+    "recruiter": "{{联系人}}",
+    "platform": "{{平台}}",
+    "captured_at": "{{datetime}}",
+    "posted_at": null,
+    "unresolved_fields": []
+  },
+  "analysis": {
+    "recommendation": "{{建议}}",
+    "hiring_problem": "",
+    "must_haves": [],
+    "preferred": [],
+    "hidden_constraints": [],
+    "positioning": "",
+    "gaps": [],
+    "questions": []
+  },
+  "evidence_map": [],
+  "artifacts": {
+    "jd_images": [],
+    "resume_drafts": [],
+    "draft_greeting": "",
+    "submitted_resume": null,
+    "submitted_greeting": null,
+    "interview_pack": null,
+    "review": null
+  },
+  "pending_facts": [],
+  "timeline": [
+    {
+      "at": "{{datetime}}",
+      "from": null,
+      "to": "准备投递",
+      "event": "draft_created",
+      "reason": "",
+      "next_action": "确认是否投递"
+    }
+  ]
+}
