@@ -8,6 +8,8 @@ If the submitted version is uncertain, state that risk and ask one concise quest
 
 Load and follow the installed `prepare-interview-pack` Skill for the handbook, Battle Card, story coverage, question library, rehearsal plan, and validation. This workbench controls inputs, storage, and lifecycle only.
 
+Pass existing company sources and unresolved identity conflicts into the interview skill. Every preparation mode must complete its basic company verification and research ledger before publication. Reuse earlier research only after checking name accuracy, source coverage, and freshness; a company heading or generic STARS map is not evidence that research happened. Store the ledger alongside the handbook and include `--company-research` in validation.
+
 Save outputs under `面试/`. Put the most urgent rehearsal order and file links in chat; keep the full handbook in the folder.
 
 ## Review mode

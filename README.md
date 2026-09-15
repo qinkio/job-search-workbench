@@ -154,6 +154,8 @@ python3 job-search-workbench/scripts/validate_job_package.py \
 
 Job Search Workbench 负责阶段路由、共享上下文和档案生命周期，不重复实现完整面试手册或职业资产库。
 
+面试交接时传入已有公司来源及身份冲突；所有准备模式均完成基础公司调研，并保存 `company-research.json`。发布检查传入 `--company-research`，复用旧研究前核对公司名称、覆盖范围和时效。只有公司章节或 STARS 地图不能证明已完成搜索。
+
 ## 隐私与事实边界
 
 这个仓库只包含规则、模板和检查脚本，不包含作者或使用者的：
