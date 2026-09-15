@@ -10,7 +10,7 @@ Use evidence in this order:
 4. Contemporaneous work assets.
 5. Prior drafts only as leads, never as proof.
 
-When the Career Proof vault is available, prefer a minimal purpose-bound export. Do not give downstream modules unrestricted access to the whole vault when a smaller evidence bundle is sufficient.
+When the local career vault is available, read its current directory, relevant complete project cards and canonical claim register directly. Follow direct-vault-reading.md. No separately maintained bundle is required; choose only relevant, purpose-approved facts for generated artifacts. Exports are optional for actual transfers.
 
 ## Ownership vocabulary
 

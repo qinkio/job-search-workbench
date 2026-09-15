@@ -2,7 +2,7 @@
 
 ## Interview gate
 
-Require a confirmed interview or an explicit request for full preparation. Locate the complete JD and recruiter updates, exact submitted resume or best-known submitted version, shared job context, interview time and round when known, and the minimum approved evidence bundle.
+Require a confirmed interview or an explicit request for full preparation. Locate the complete JD and recruiter updates, exact submitted resume or best-known submitted version, shared job context, interview time and round when known, and the current relevant complete career-vault records with approved facts.
 
 If the submitted version is uncertain, state that risk and ask one concise question. Do not substitute the latest mother template without disclosure.
 

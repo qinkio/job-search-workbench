@@ -1,17 +1,20 @@
 ---
 name: job-search-workbench
-description: "Run a local-first, evidence-backed job workflow from JD evaluation through application materials, recruiter communication, interview preparation, and interview review. Use for 岗位分析、是否值得投、BOSS直聘招呼、定制简历、投递归档、HR回复、面试准备、面试录音复盘, or when one active role should keep these outputs consistent. Do not send applications or messages, and keep offer comparison or salary negotiation separate."
+description: "Run a private, evidence-backed job workflow from JD evaluation through application materials, recruiter communication, interview preparation, and interview review. Use for 岗位分析、是否值得投、BOSS直聘招呼、定制简历、投递归档、HR回复、面试准备、面试录音复盘, or when one active role should keep these outputs consistent. Do not send applications or messages, and keep offer comparison or salary negotiation separate."
 ---
 
 # Job Search Workbench
 
+## Current local vault workflow
+
+Use the current career vault directly for local resume and interview tasks. Read [references/direct-vault-reading.md](references/direct-vault-reading.md) for the reading and update contract. A separate maintained evidence package is not required; exports are optional one-time transfer outputs. This direct-read mode supersedes export preferences elsewhere for local work.
+
+
 Use one shared job analysis and evidence map to keep the application message, submitted resume, recruiter replies, interview answers, and post-interview review consistent. Treat the career vault as the fact source and each job folder as that role's working record.
 
-## Load local configuration
+## Load personal configuration
 
-Look for `references/local-config.md` before handling candidate-facing claims or local files. Users create it from [references/local-config.example.md](references/local-config.example.md); it is intentionally excluded from Git so identity, source paths, compensation constraints, and claim boundaries stay local.
-
-If the local configuration is absent, continue with read-only JD analysis when possible. Before creating application files, ask only for the minimum missing paths and candidate fields that materially affect the result. Never write private configuration into the public repository.
+Read [references/personal-profile.md](references/personal-profile.md) before handling any candidate-facing claim or local file. It contains the private source paths, output paths, minimum compensation rule, and known wording boundaries for this personal Skill.
 
 Read [references/evidence-and-consistency.md](references/evidence-and-consistency.md) before writing a message, resume, recruiter reply, or interview answer.
 
@@ -58,7 +61,7 @@ Read [references/archive-and-lifecycle.md](references/archive-and-lifecycle.md).
 
 ### Interview or Review
 
-Read [references/interview-and-review.md](references/interview-and-review.md). For a complete interview handbook, load and follow the installed `prepare-interview-pack` Skill. Do not reproduce its handbook logic here. Give it the exact submitted resume, shared job context, current recruiter information, interview time and round, and only the minimum approved evidence bundle.
+Read [references/interview-and-review.md](references/interview-and-review.md). For a complete interview handbook, load and follow the installed `prepare-interview-pack` Skill. Do not reproduce its handbook logic here. Give it the exact submitted resume, shared job context, current recruiter information, interview time and round, and only the current relevant complete career-vault records and approved canonical claims.
 
 ## Respect stage gates
 
