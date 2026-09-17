@@ -16,7 +16,7 @@ YYYY-MM-DD_公司_岗位/
 ├── 简历/
 │   ├── 候选人-岗位-v1.html
 │   ├── 候选人-岗位-v2.html
-│   ├── 实际投递版.pdf
+│   ├── 实际投递版.html
 │   └── styles/resume.css
 ├── 沟通/HR沟通记录.md
 └── 面试/
@@ -37,8 +37,9 @@ Every transition records timestamp, prior state, new state, reason, next action,
 
 - Apply mode creates a draft resume version and draft message. It does not imply submission.
 - Freeze mode requires user confirmation. Record the exact sent text, platform, sent time, submitted resume file, and version checksum or stable file identity when practical.
-- If the actual file is unavailable, record the known version and mark the file pending rather than fabricating a PDF.
-- Never overwrite the frozen submitted PDF. Later improvements become new drafts.
+- Freeze the actual submitted artifact or platform version, whether HTML, PDF, or another known format.
+- If the actual file is unavailable, record the known version and mark the file pending rather than fabricating an artifact.
+- Never overwrite the frozen submitted artifact. Later improvements become new drafts.
 
 ## Communication log
 

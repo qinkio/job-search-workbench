@@ -24,7 +24,7 @@ Infer the mode from the user's natural language. A direct mode name overrides in
 
 - **Analyze:** “值得投吗”“分析这个岗位”. Evaluate only. Do not create a job folder unless the user asks to save it.
 - **Apply:** “写打招呼和简历”“准备投递”. Create the shared analysis, application message, two-page HTML resume, and draft job folder.
-- **Freeze:** “已投递”“这版发出去了”. Record the exact sent message, sent time, and actual submitted PDF or platform version. Never infer that a draft was sent.
+- **Freeze:** “已投递”“这版发出去了”. Record the exact sent message, sent time, and actual submitted HTML, PDF, or platform version. Never infer that a draft was sent.
 - **Communicate:** “HR这样问怎么回复”. Draft the reply from approved evidence and append the exchange, new facts, and open questions to the existing job folder.
 - **Interview:** “收到面试”“周三业务面”. Use the exact submitted resume, current JD, recruiter updates, and approved evidence to build the interview package.
 - **Review:** “面试录音”“复盘这次面试”. Save the transcript or supplied notes, extract questions and delivery weaknesses, and propose facts for review.
@@ -81,10 +81,10 @@ Lead with the immediate decision or requested message. In chat, show only the re
 For application materials, run:
 
 ```bash
-python3 scripts/validate_application.py /absolute/resume.html --greeting-file /absolute/greeting.txt --pdf /absolute/resume.pdf
+python3 scripts/validate_application.py /absolute/resume.html --greeting-file /absolute/greeting.txt
 ```
 
-Omit `--greeting-file` when no greeting was requested. Omit `--pdf` only before the render exists; it is required for final application delivery. Inspect the rendered pages for readable type, clipping, isolated education lines, and large accidental blank areas because structural PDF validation cannot judge visual quality alone.
+Omit `--greeting-file` when no greeting was requested. The default final application deliverable is the validated two-page HTML resume; do not render or save a PDF unless the user explicitly requests one. Inspect the HTML in a browser at A4 print dimensions for readable type, clipping, isolated education lines, and large accidental blank areas. When a PDF is explicitly requested, pass `--pdf /absolute/resume.pdf` after rendering it and inspect the rendered PDF pages as an additional check.
 
 For a saved job package, run:
 

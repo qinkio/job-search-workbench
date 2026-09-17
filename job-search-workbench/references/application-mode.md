@@ -42,7 +42,7 @@ Pass each additional JD source with another `--jd`. The initializer refuses to o
 ## Quality checks
 
 - Validate the HTML and greeting with `scripts/validate_application.py`.
-- Render to PDF for visual QA; verify exactly two A4 pages and inspect both pages.
-- After rendering, rerun the validator with `--pdf /absolute/resume.pdf` so page count and A4 dimensions are checked deterministically.
+- Inspect the HTML in a browser at A4 print dimensions and verify that both resume sheets are readable and visually complete.
+- Do not render or save a PDF by default. When the user explicitly requests a PDF, render it, verify exactly two A4 pages, inspect both pages, and rerun the validator with `--pdf /absolute/resume.pdf`.
 - Fix clipping, orphaned headings, overfull contact lines, cramped type, accidental blank space, and education pushed to a third page.
 - Copy the CSS into the role's `简历/styles/` directory.

@@ -108,7 +108,7 @@ YYYY-MM-DD_公司_岗位/
 ├── job-context.json          # 跨阶段复用的机器上下文
 ├── 简历/
 │   ├── 候选人-岗位-v1.html
-│   ├── 实际投递版.pdf
+│   ├── 实际投递版.html
 │   └── styles/resume.css
 ├── 沟通/HR沟通记录.md
 └── 面试/
@@ -138,9 +138,10 @@ python3 job-search-workbench/scripts/init_job_package.py \
 ```bash
 python3 job-search-workbench/scripts/validate_application.py \
   /absolute/path/to/resume.html \
-  --greeting-file /absolute/path/to/greeting.txt \
-  --pdf /absolute/path/to/resume.pdf
+  --greeting-file /absolute/path/to/greeting.txt
 ```
+
+默认交付并校验两页 HTML 简历，不生成 PDF。只有用户明确要求 PDF 时，才在渲染后追加 `--pdf /absolute/path/to/resume.pdf` 做额外校验。
 
 检查岗位档案：
 
