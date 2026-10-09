@@ -29,6 +29,7 @@ Start from `assets/resume-template.html` or the configured local mother template
 - Reorder and rewrite only from approved evidence. Do not fill space with meta commentary or weakly related claims.
 - Use problem/action/result language. Keep role title and ownership boundaries explicit.
 - Education must remain a separate block.
+- In work history, prioritize the overall responsibilities, cumulative service scale and management scope of the role. Put the scope and results of an individual case primarily in representative projects; if cited in work history, explicitly label it as one case within the broader role. Never use a case’s customer or store count as a substitute for the role’s total scope. If the overall scale is unconfirmed, omit it or ask a targeted question when it materially affects positioning; continue drafting from confirmed facts.
 - Keep versions rather than overwriting prior drafts.
 
 Create the draft job package using the archive contract. Prefer the deterministic initializer, then replace its placeholders with the completed analysis and tailored content:
@@ -41,6 +42,7 @@ Pass each additional JD source with another `--jd`. The initializer refuses to o
 
 ## Quality checks
 
+- Check every customer count, store count and coverage figure in context: distinguish cumulative personal service scale, concurrent service scale, system coverage, direct reports and individual case scope. A factually correct number must not imply a narrower or broader overall role than the evidence supports.
 - Validate the HTML and greeting with `scripts/validate_application.py`.
 - Inspect the HTML in a browser at A4 print dimensions and verify that both resume sheets are readable and visually complete.
 - Do not render or save a PDF by default. When the user explicitly requests a PDF, render it, verify exactly two A4 pages, inspect both pages, and rerun the validator with `--pdf /absolute/resume.pdf`.

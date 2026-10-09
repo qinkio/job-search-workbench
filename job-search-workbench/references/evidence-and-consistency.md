@@ -25,6 +25,10 @@ Do not use a metric unless its population, stage, time, meaning, and attribution
 
 Use approved aggregates, ranges, or rounded values. Do not expose identifiable customer names, individual contract value, unit price, confidential revenue, or internal-only denominator unless explicitly cleared for that purpose.
 
+## Scale and case boundaries
+
+Keep each scale figure attached to its unit, time basis and ownership: cumulative personally operated merchants, concurrent merchants, system-supported merchants, covered staff, direct reports or stores in one case. These measures are not interchangeable. An individual case supports an achievement; its scope does not define the candidate’s entire role. Keep candidate-specific totals in the career vault or the scoped job record, not in reusable skill rules. New user corrections may inform the current draft, but do not silently update the career vault.
+
 ## One context, different expressions
 
 All artifacts must point to the same evidence IDs or source facts. The greeting selects one or two strongest proofs; the resume expands the most relevant evidence; recruiter replies answer the exact question; interview preparation covers every project on the actually submitted resume; and interview review may create proposed facts but cannot silently change prior artifacts or the canonical vault.
