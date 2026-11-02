@@ -17,6 +17,7 @@ SUBMITTED_OR_LATER = {"已投递", "HR沟通", "面试中", "Offer", "未通过"
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("job_folder", type=Path)
+    parser.add_argument("--delivery", action="store_true", help="require an explicit reviewed current draft")
     args = parser.parse_args()
     root = args.job_folder
     errors: list[str] = []
@@ -67,6 +68,27 @@ def main() -> int:
         for rel in drafts:
             if not (root / rel).is_file():
                 errors.append(f"resume draft path does not exist: {rel}")
+        current = artifacts.get("current_resume")
+        archived = artifacts.get("archived_resume_drafts", [])
+        if not current:
+            (errors if args.delivery else warnings).append("no explicit current_resume; select a reviewed draft before delivery/export")
+        elif current not in drafts or not (root / current).is_file():
+            errors.append("current_resume must reference an existing listed draft")
+        if current and current in archived:
+            errors.append("current_resume cannot also be archived")
+        for rel in archived:
+            if rel not in drafts:
+                errors.append(f"archived resume is not in resume_drafts: {rel}")
+        for export in artifacts.get("resume_exports", []):
+            if not isinstance(export, dict):
+                errors.append("resume export must be an object")
+                continue
+            source = export.get("source_resume")
+            path = export.get("path")
+            if source not in drafts or not source or not (root / source).is_file():
+                errors.append("resume export has no existing listed source draft")
+            if not path or not (root / path).is_file():
+                errors.append("resume export file is missing")
         if status == "准备投递" and (artifacts.get("submitted_resume") or artifacts.get("submitted_greeting")):
             errors.append("draft status must not contain submitted artifacts")
         if status == "准备投递" and not artifacts.get("draft_greeting"):

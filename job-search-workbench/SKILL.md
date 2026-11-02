@@ -68,8 +68,8 @@ Read [references/interview-and-review.md](references/interview-and-review.md). F
 - Do not create a heavy interview handbook before an interview is confirmed. A job folder may contain only an interview-preparation entry point.
 - Do not mark a role `已投递` until the user confirms the application was sent.
 - Do not mark a resume or message as submitted unless its exact version is known.
-- Do not promote a new claim from recruiter communication or interview review into the career vault. Put it in `待核验事实`; use `career-proof` only after explicit approval.
-- Do not change resume strategy after one rejection. Aggregate outcomes after roughly 30 applications in one direction or after a completed interview, then propose changes for review.
+- Do not promote a new claim from recruiter communication or interview review into the career vault. Record its confirmation status and permitted use in `待核验事实`; explicitly confirmed, application-authorized supplements may be used for that role without vault integration. Use `career-proof` for vault updates only after explicit approval.
+- Do not overhaul the core positioning from one rejection or a small response-rate sample. Use roughly 30 comparable applications or substantive interview feedback to assess broader strategy, not as a prerequisite to fix confirmed factual errors, reproducible wording problems or JD mismatches.
 - Do not send, upload, publish, delete, or share anything externally without the user's explicit authorization for that action.
 
 ## Keep the response lightweight
@@ -89,7 +89,7 @@ Omit `--greeting-file` when no greeting was requested. The default final applica
 For a saved job package, run:
 
 ```bash
-python3 scripts/validate_job_package.py /absolute/job-folder
+python3 scripts/validate_job_package.py /absolute/job-folder --delivery
 ```
 
-Treat errors as blockers. Review warnings and fix those relevant to the current stage. Validation establishes structural consistency only; it does not prove the truth or publication permission of a claim.
+Treat errors as blockers. Review warnings and fix those relevant to the current stage. Validation establishes structural consistency only; it does not prove truth, publication permission or hiring fit. Complete the content acceptance review in references/application-mode.md and explicitly select the current recommended draft before delivery. Read current role supplements alongside vault facts; follow references/evidence-and-consistency.md for conflicts and newly confirmed local facts.

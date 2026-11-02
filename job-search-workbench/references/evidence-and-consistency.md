@@ -34,3 +34,13 @@ Keep each scale figure attached to its unit, time basis and ownership: cumulativ
 All artifacts must point to the same evidence IDs or source facts. The greeting selects one or two strongest proofs; the resume expands the most relevant evidence; recruiter replies answer the exact question; interview preparation covers every project on the actually submitted resume; and interview review may create proposed facts but cannot silently change prior artifacts or the canonical vault.
 
 Before delivery, compare role names, dates, project names, figures, populations, and ownership verbs across the greeting, submitted resume, job context, and interview scripts. Resolve conflicts or mark them `待核验`; never select the most favorable value automatically.
+
+
+## New confirmations and substantive conflicts
+
+Read the current role context and candidate supplements as well as the vault. An explicitly confirmed candidate fact with a traceable source and authorization for this application may be used locally before vault integration. Do not treat absence from the vault as disproof. Preserve source, confirmation date, intended use and wording boundary in the existing pending_facts record; distinguish confirmed local supplements from unconfirmed extracted proposals. A summary saying “confirmed” is evidence of a recorded confirmation, not independent verification of the underlying metric.
+
+For a conflict, compare source, date, population, action, stage and measurement definition. A newer statement does not automatically supersede an older fact. Preserve substantive conflicts; resolve only with adequate evidence or a targeted clarification, continuing unaffected work. Do not silently update the vault.
+
+For user/customer/store counts distinguish direct testers, their managed portfolio, data actually processed, deployment, ongoing activity and business improvement. Never infer one from another. Do not invent a more specific usage action when rewriting an ambiguous confirmation. Synthetic verification and real trials can coexist without proven business improvement.
+

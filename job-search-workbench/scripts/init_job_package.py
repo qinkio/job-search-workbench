@@ -125,6 +125,9 @@ def main() -> int:
         "artifacts": {
             "jd_images": jd_paths,
             "resume_drafts": [f"简历/{resume_name}"],
+            "current_resume": None,
+            "archived_resume_drafts": [],
+            "resume_exports": [],
             "draft_greeting": "",
             "submitted_resume": None,
             "submitted_greeting": None,

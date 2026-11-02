@@ -45,10 +45,19 @@ Every transition records timestamp, prior state, new state, reason, next action,
 
 Append each recruiter exchange with date, speaker, exact or faithfully summarized message, answer sent, newly learned role facts, open questions, and next action. Treat recruiter statements as job facts, not candidate facts.
 
-Candidate details first disclosed during communication go to `待核验事实`. They do not enter the career vault without a separate review.
+Candidate details first disclosed during communication go to `待核验事实` with source, confirmation status and permitted use. Unconfirmed proposals are not application facts. Explicit candidate confirmation and application authorization permit scoped use; vault integration remains separate.
 
 ## Index and outcomes
 
 Update the root job index for saved roles. Include company, role, compensation, current status, last activity, next action, submitted resume version, and folder link.
 
 After roughly 30 applications in one direction or after a completed interview, aggregate response rates and failure stages by role family and resume version. Propose changes; never rewrite the master narrative automatically from a small sample.
+
+## Current version identity
+
+Use artifacts.current_resume for the single recommended draft and artifacts.archived_resume_drafts for superseded drafts; preserve resume_drafts as history. During initialization current_resume is null until the template has been replaced and reviewed. Every revision updates these pointers and the role record together, and appends its reason to the timeline. Never choose the current draft by filename sorting or modification time. Avoid ambiguous duplicate version labels.
+
+Keep the submitted artifact separate and immutable. Export only from the selected current draft; when retaining an export record its source in artifacts.resume_exports as {path, source_resume}. Verify the rendered content corresponds to that source. Older packages without these fields remain readable, but require explicit version selection before another revision or export. Do not bulk migrate historical archives during ordinary skill maintenance.
+
+
+Use validate_job_package.py --delivery for a finished package; missing current_resume is then an error. Omit --delivery when inspecting legacy packages or incomplete scaffolds.

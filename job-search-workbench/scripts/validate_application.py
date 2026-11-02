@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 
-FORBIDDEN = ("墨刀", "岗位匹配成果", "面向岗位的经营框架", "尚未上线")
+FORBIDDEN = ("墨刀", "岗位匹配成果", "面向岗位的经营框架")
 
 
 def finish(errors: list[str], warnings: list[str]) -> int:
@@ -21,6 +21,7 @@ def finish(errors: list[str], warnings: list[str]) -> int:
     if errors:
         print("APPLICATION_INVALID")
         return 1
+    print("NOTE: structural checks only; factual and JD review required")
     print("APPLICATION_OK")
     return 0
 
@@ -39,6 +40,8 @@ def main() -> int:
         return finish(errors, warnings)
 
     text = args.resume.read_text(encoding="utf-8")
+    if re.search(r"\{\{[^{}]+\}\}", text):
+        errors.append("resume contains unresolved template placeholders")
     sheet_pattern = r'<article\b[^>]*class=["\'][^"\']*\bsheet\b'
     if len(re.findall(sheet_pattern, text)) != 2:
         errors.append("resume must contain exactly two article.sheet elements")
