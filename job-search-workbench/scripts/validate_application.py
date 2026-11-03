@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from html import unescape
 import re
 import subprocess
 import sys
@@ -54,6 +55,20 @@ def main() -> int:
     for term in FORBIDDEN:
         if term in text:
             errors.append(f"forbidden resume term: {term}")
+    # Check rendered labels, not archive paths, comments or legitimate employers.
+    display_text = re.sub(r"<!--.*?-->", "", text, flags=re.S)
+    display_text = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", "", display_text, flags=re.S | re.I)
+    display_text = unescape(re.sub(r"<[^>]+>", " ", display_text))
+    compact_display = re.sub(r"\s+", "", display_text)
+    for label in ("定制简历", "定制版", "主简历", "JD版", "制作说明"):
+        if label in compact_display:
+            errors.append(f"internal label in public resume: {label}")
+    label_regions = re.findall(r"<title\b[^>]*>.*?</title>|<h[1-6]\b[^>]*>.*?</h[1-6]>|<header\b[^>]*>.*?</header>|<[^>]+class=[\"'][^\"']*\bfooter\b[^\"']*[\"'][^>]*>.*?</div>", text, flags=re.S | re.I)
+    for region in label_regions:
+        label_text = unescape(re.sub(r"<[^>]+>", " ", region))
+        if re.search(r"(?<![A-Za-z0-9])v\s*\d+(?:\.\d+)*(?![A-Za-z0-9])|版本\s*[:：]?\s*\d|第\s*\d+\s*版|草稿", label_text, re.I):
+            errors.append("internal version/draft label in resume title, heading, header or footer")
+            break
     for risky in ("精通", "高度匹配", "全面掌握"):
         if risky in text:
             warnings.append(f"review potentially inflated wording: {risky}")

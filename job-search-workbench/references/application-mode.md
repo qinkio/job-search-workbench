@@ -30,6 +30,8 @@ Order first-page proof around that deliverable. State genuine confirmed results 
 
 Start from `assets/resume-template.html` or the configured local mother template. Preserve the single-column visual system and independent CSS.
 
+Public-facing resume titles, headers and footers use only the candidate name and target role (for example, `姓名｜目标岗位`). Do not include company-targeting labels, `定制简历`, `定制版`, `主简历`, `JD版`, draft/version labels or production notes. Company names remain appropriate in truthful work/project history. Keep company targeting and version identifiers in internal archive paths and records, not in the resume display. Inspect title, headings and both page footers before delivery; the application validator rejects common internal labels and displayed version numbers.
+
 - Default page 1: header, role positioning, professional summary, results, capabilities and main work history. Adapt section order to the JD while retaining the established visual system.
 - Page 2: relevant projects, AI practice when relevant, early experience, tools and education. Choose project count and space by relevance and substance; never pad to a fixed count.
 - Reorder and rewrite only from approved evidence. Do not fill space with meta commentary or weakly related claims.
